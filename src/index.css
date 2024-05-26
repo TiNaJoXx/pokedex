@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  margin: 0;
+  /* background-color: #efefef; */
+  background-image: url('../src/assets/bg-image.png');
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: disc; /* o 'circle', 'square', 'decimal', etc. */
+}
+
+.text-wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Cambia 3 al número de líneas que desees mostrar */
+  overflow: hidden;
+}
+
+.screen {
+  background-image: url('../src/assets/bg-screen.png');
+  background-repeat: repeat;
+}
+
+@keyframes moveOval {
+  0% {
+    rotate: 0deg;
+  }
+
+  30% {
+      rotate: 0deg;
+  }
+  80% {
+      rotate: 360deg;
+  }
+  100% {
+      rotate: 360deg;
+  }
+}
+
+.animate-oval {
+  animation: moveOval 12s cubic-bezier(.175,.885,.32,1.275) 5s infinite alternate;
+}
