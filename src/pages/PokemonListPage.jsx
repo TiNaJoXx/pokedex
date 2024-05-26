@@ -3,7 +3,7 @@ import { useAxios } from '../hooks/useAxios';
 import { Bars } from 'react-loader-spinner';
 import Searcher from '../components/Searcher';
 import MG from '../components/MG';
-import PokemonList from '../components/PokemonList'
+import PokemonList from '../components/PokemonList';
 
 const PokemonListPage = () => {
     const { response, error, loading } = useAxios({ 

@@ -31,8 +31,8 @@ const PokemonList = ({ pokemonList }) => {
         <div className='grid grid-cols-1 lg:grid-cols-3 w-full gap-5 pb-2'>
             {
                 details.map((pokemon, index) => (
-                    <Link to={`/pokemon/${pokemon.id}`} >
-                        <PokemonCard key={index} pokemon={pokemon} />
+                    <Link to={`/pokemon/${pokemon.id}`} key={index}>
+                        <PokemonCard pokemon={pokemon} />
                     </Link>
                 ))
             }
