@@ -267,7 +267,7 @@ export const TypeIcons = {
     grass: <GrassIcon />,
     ground: <GroundIcon />,
     ice: <IceIcon />,
-    metal: <MetalIcon />,
+    steel: <MetalIcon />,
     normal: <NormalIcon />,
     poison: <PoisonIcon />,
     psychic: <PsychicIcon />,

@@ -8,7 +8,7 @@ import PokemonList from '../components/PokemonList';
 const PokemonListPage = () => {
     const { response, error, loading } = useAxios({ 
         method: 'GET',
-        url: '/pokemon?limit=151' 
+        url: '/pokemon?limit=251' 
     });
     const [searchText, setSearchText] = useState("");
     const onSearchTextChange = ((e) => {

@@ -95,11 +95,11 @@ const BusinessCard = ({ response }) => {
                     ) :
                     error ? ( 'Error...') 
                     : (
-                        <p className='text-xs'>
+                        <p className='text-xs text-wrap'>
                             {
                                 detail[selectedAbility].flavor_text_entries.filter(text => (
                                     text.version_group.name === 'scarlet-violet' && text.language.name === 'en'
-                                ))[0].flavor_text
+                                ))[0]?.flavor_text
                             }
                         </p>
                     )
