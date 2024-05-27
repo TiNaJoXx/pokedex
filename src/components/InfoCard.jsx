@@ -40,8 +40,6 @@ const InfoCard = ({ response }) => {
 
     const { details, error: errorDetail, loading: loadingDetail } = usePokemonDetails(evolvesTo);
 
-    console.log(details)
-
     return (
         <div className='bg-white/[.8] rounded-lg shadow-xl h-full flex-grow basis-0 py-5 px-8'>
             <div className='text-sm'>
@@ -92,7 +90,18 @@ const InfoCard = ({ response }) => {
                 <p className='text-base pb-3'>Evolution</p>
                 <div className='flex justify-center items-center gap-2 lg:gap-20'>
                     {
-                        loadingChain || loadingDetail ? ( 'Cargando... ') :
+                        loadingChain || loadingDetail ? ( 
+                            <RotatingLines
+                                visible={true}
+                                height="30"
+                                width="30"
+                                strokeWidth="3"
+                                animationDuration="0.75"
+                                ariaLabel="rotating-lines-loading"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                            />
+                        ) :
                         errorChain || errorDetail.hasError ? ('Error... ') : 
                         details.map((pkm, index) => (
                             <div key={index} className='relative w-20 h-20 lg:w-28 lg:h-28 bg-gray-200 rounded-full flex justify-center items-center'>
