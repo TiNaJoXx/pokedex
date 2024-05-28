@@ -9,7 +9,10 @@ const PokemonList = ({ pokemonList }) => {
     
     if (loading) {
         return (
-            <div className='grid grid-cols-1 lg:grid-cols-3 w-full gap-5'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 w-full gap-5'>
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
                 <Skeleton />
                 <Skeleton />
                 <Skeleton />
@@ -28,7 +31,7 @@ const PokemonList = ({ pokemonList }) => {
     }
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 w-full gap-5 pb-2'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 w-full gap-5 pb-2'>
             {
                 details.map((pokemon, index) => (
                     <Link to={`/pokemon/${pokemon.id}`} key={index}>
