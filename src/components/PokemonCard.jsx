@@ -6,7 +6,7 @@ const PokemonCard = ({ pokemon }) =>{
     <div className='flex bg-white/[.8] rounded shadow-xl px-3 gap-4 cursor-pointer'>
         <div className='w-24 flex items-center'>
             <img 
-                src={pokemon.sprites.other["official-artwork"].front_default} 
+                src={pokemon.sprites?.other["official-artwork"].front_default} 
                 alt={pokemon.name}
                 className='drop-shadow-lg'
             />
